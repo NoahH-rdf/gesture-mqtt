@@ -13,7 +13,7 @@ import paho.mqtt.client as mqtt
 
 MQTT_BROKER = "test.mosquitto.org"
 MQTT_PORT = 1883
-MQTT_TOPIC = "Smarthome/Gestenerkennung/gestures/result"
+MQTT_TOPIC = "home223/gestures/result"
 
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.connect(MQTT_BROKER, MQTT_PORT, 60)
@@ -46,9 +46,9 @@ def detect_thumb_gesture(landmarks):
     wrist = landmarks[0]
 
     if thumb_tip.y < wrist.y - 0.1:
-        return "thumb_up"
+        return "licht_an"
     elif thumb_tip.y > wrist.y + 0.1:
-        return "thumb_down"
+        return "licht_aus"
     return None
 
 

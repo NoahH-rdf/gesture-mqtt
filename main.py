@@ -11,11 +11,11 @@ from mediapipe.tasks import python as mp_tasks
 from mediapipe.tasks.python import vision
 import paho.mqtt.client as mqtt
 
-MQTT_BROKER = "localhost"
+MQTT_BROKER = "test.mosquitto.org"
 MQTT_PORT = 1883
 MQTT_TOPIC = "gestures/result"
 
-client = mqtt.Client()
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.connect(MQTT_BROKER, MQTT_PORT, 60)
 
 base_options = mp_tasks.BaseOptions(model_asset_path="hand_landmarker.task")

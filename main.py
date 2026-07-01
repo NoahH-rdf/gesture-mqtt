@@ -13,7 +13,7 @@ import paho.mqtt.client as mqtt
 
 MQTT_BROKER = "test.mosquitto.org"
 MQTT_PORT = 1883
-MQTT_TOPIC = "gestures/result"
+MQTT_TOPIC = "Smarthome/Gestenerkennung/gestures/result"
 
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.connect(MQTT_BROKER, MQTT_PORT, 60)

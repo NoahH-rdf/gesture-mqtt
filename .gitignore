@@ -1,0 +1,54 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ---- uv / venv ----
+.venv/
+venv/
+env/
+ENV/
+
+# uv lock/cache (Lockfile NICHT ignorieren -> uv.lock sollte i.d.R. mit ins Repo,
+# falls du es bewusst NICHT teilen willst, einfach die Zeile unten aktivieren)
+# uv.lock
+
+# ---- MediaPipe Modell-Dateien (groß, leicht neu herunterladbar) ----
+*.task
+*.tflite
+
+# ---- OpenCV / Bild- & Videodaten (falls beim Testen erzeugt) ----
+*.avi
+*.mp4
+*.mov
+captures/
+output/
+
+# ---- VS Code ----
+.vscode/
+*.code-workspace
+
+# ---- Betriebssystem-Dateien ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs / temporäre Dateien ----
+*.log
+*.tmp
+.cache/
+
+# ---- Umgebungsvariablen / Secrets (z.B. MQTT-Zugangsdaten) ----
+.env
+.env.*
+secrets.json
+
+# ---- Jupyter (falls später genutzt) ----
+.ipynb_checkpoints/
+
+# ---- Build-/Distributionsordner ----
+dist/
+build/
+*.egg-info/
